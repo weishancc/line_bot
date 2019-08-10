@@ -5,6 +5,8 @@ sj bn
 黃色 bn
 黃光 bn
 藍色 bn
+藍光 bn
+綠色 bn
 綠光 bn
 肯德基 bn
 kfc bn
