@@ -1,0 +1,2 @@
+用到的套件要新增在requirement.txt
+heroku才會連結下載該套件！
