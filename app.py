@@ -40,7 +40,7 @@ def callback():
     return 'OK'
 
 # 處理訊息
-import jieba.posseg as pseg
+#import jieba.posseg as pseg
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
