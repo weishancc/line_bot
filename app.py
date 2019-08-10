@@ -39,26 +39,12 @@ def callback():
 
     return 'OK'
 
-
 # 處理訊息
-#import jieba.posseg as pseg
-
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    #拆解名詞（物品）
-    #qst=event.message.text
-    #reply=""
-    #cuts = pseg.lcut(qst)
-
-    #for cut in cuts:
-        #if(cut.flag =='n'):
-            #reply = cut.word
-
-    ＃回傳訊息
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text='ahah'))
-
+        TextSendMessage(text=event.message.text))
 
 if __name__ == "__main__":
     app.run()
