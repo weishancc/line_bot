@@ -47,10 +47,10 @@ def handle_message(event):
     ques = str(event.message.text)
     cuts = pseg.lcut(ques)
     back = ""
-    #for cut in cuts:
-        #if(cut.flag =='n'):
-            #back = cut.word
-    back = 'hello'
+    for cut in cuts:
+        if(cut.flag =='n'):
+            back = cut.word
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=back))
