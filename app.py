@@ -41,7 +41,7 @@ def callback():
 
 # 處理訊息
 #import jieba.posseg as pseg
-
+import math
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     #ques = event.message.text
