@@ -41,16 +41,16 @@ def callback():
 
 # 處理訊息
 import jieba.posseg as pseg
-import math
+
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    #ques = event.message.text
-    #cuts = pseg.lcut("12546")
-    #back = ""
-    #for cut in cuts:
-        #if(cut.flag =='n'):
-            #back = cut.word
-    back='message'
+    ques = event.message.text
+    cuts = pseg.lcut("12546")
+    back = ""
+    for cut in cuts:
+        if(cut.flag =='n'):
+            back = cut.word
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=back))
