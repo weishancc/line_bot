@@ -54,7 +54,7 @@ def handle_message(event):
     find = False #找到名詞（物品）
 
     for cut in cuts:
-        if(cut.flag =='n'):
+        if(cut.flag =='bn'):
             find = True
             back = cut.word
             line_bot_api.reply_message(
