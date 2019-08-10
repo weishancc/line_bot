@@ -45,7 +45,7 @@ import jieba.posseg as pseg
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     #ques = event.message.text
-    cuts = pseg.lcut("12546")
+    #cuts = pseg.lcut("12546")
     #back = ""
     #for cut in cuts:
         #if(cut.flag =='n'):
