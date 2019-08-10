@@ -2,4 +2,3 @@ line-bot-sdk==1.8.0
 flask==1.0.2
 jieba==0.39
 gunicorn
-dict.txt
