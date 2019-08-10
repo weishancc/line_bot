@@ -5,8 +5,6 @@ sj bn
 黃色 bn
 黃光 bn
 藍色 bn
-藍光 bn
-綠色 bn
 綠光 bn
 肯德基 bn
 kfc bn
@@ -135,11 +133,11 @@ kfc bn
 星願 ban
 巧克力水球 ban
 聖誕鈴鐺 ban
-足球 ban
+足球水球 ban
 螺旋丸 ban
-乳牛 ban
-粉紅 ban
-西瓜 ban
+乳牛水球 ban
+粉紅水球 ban
+西瓜水球 ban
 
 
 

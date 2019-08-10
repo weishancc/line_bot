@@ -51,10 +51,11 @@ def handle_message(event):
     ques = str(event.message.text)
     cuts = pseg.lcut(ques)
     find = False #找到名詞（物品）
+    lst = ['bn','wn','jn','fn', 'pn','en','cn','ban']   #物品種類（詞性）
 
-    #cut.word:物品名稱
+    #cut.word:物品名稱 ; cut.flag:詞性
     for cut in cuts:
-        if(cut.word <> ''):
+        if(cut.flag in lst):
             find = True
             line_bot_api.reply_message(
                 event.reply_token,
