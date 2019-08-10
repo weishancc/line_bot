@@ -50,20 +50,19 @@ def handle_message(event):
 
     ques = str(event.message.text)
     cuts = pseg.lcut(ques)
-    back = ""   #回傳的訊息
     find = False #找到名詞（物品）
 
+    #cut.word:物品名稱
     for cut in cuts:
-        if(cut.flag =='bn'):
+        if(cut.word <> ''):
             find = True
-            back = cut.word
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text = back))
+                TextSendMessage(text = cut.word))
     if(not find):
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text = '『 請直接提問物品,哈哈 』'))
+            TextSendMessage(text = '請直接提問物品（完整名稱）,我才看得懂拉！'))
 
 
 if __name__ == "__main__":
