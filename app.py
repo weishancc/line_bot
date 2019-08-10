@@ -41,9 +41,13 @@ def callback():
 
 # 處理訊息
 import jieba.posseg as pseg
+import jieba
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    #新增自定義詞庫
+    jieba.load_userdict('./dict.txt')
+
     ques = str(event.message.text)
     cuts = pseg.lcut(ques)
     back = ""   #回傳的訊息
