@@ -46,17 +46,17 @@ import jieba.posseg as pseg
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     #處理問題並拆出名詞（物品）
-    ques = event.message.text
-    back_text = ""
+    #ques = event.message.text
+    #back_text = ""
 
-    cuts = pseg.lcut(ques)
-    for cut in cuts:
-        if(cut.flag =='n'):
-            back_text = cut.word
+    #cuts = pseg.lcut(ques)
+    #for cut in cuts:
+    #    if(cut.flag =='n'):
+    #        back_text = cut.word
 
         line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text = "haha"))
+        TextSendMessage(text = event.message.text))
 
 
 if __name__ == "__main__":
