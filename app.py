@@ -46,16 +46,19 @@ import jieba.posseg as pseg
 def handle_message(event):
     ques = str(event.message.text)
     cuts = pseg.lcut(ques)
-    back = ""
+    back = ""   #回傳的訊息
+    find = False #找到名詞（物品）
+
     for cut in cuts:
         if(cut.flag =='n'):
+            find = True
             back = cut.word
-        else:
-            back = 請輸入有效的物品名稱！haha
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=back))
+    if(not find):
+        print('『 請直接提問物品名稱,哈啊哈 』')
 
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=back))
 
 if __name__ == "__main__":
     app.run()
