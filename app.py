@@ -40,11 +40,20 @@ def callback():
     return 'OK'
 
 # 處理訊息
+import jieba.posseg as pseg
+
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    ques = event.message.text
+    cuts = pseg.lcut(ques)
+    back = ""
+    for cut in cuts:
+        if(cut.flag =='n'):
+            back = cut.word
+
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text='hello word'))
+        TextSendMessage(text=back))
 
 if __name__ == "__main__":
     app.run()
