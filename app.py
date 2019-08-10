@@ -50,6 +50,8 @@ def handle_message(event):
     for cut in cuts:
         if(cut.flag =='n'):
             back = cut.word
+        else:
+            back = 請輸入有效的物品名稱！haha
 
     line_bot_api.reply_message(
         event.reply_token,
