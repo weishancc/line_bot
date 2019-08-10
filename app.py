@@ -59,9 +59,11 @@ def handle_message(event):
             back = cut.word
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text=back))
+                TextSendMessage(text = back))
     if(not find):
-        print('『 請直接提問物品名稱,哈啊哈 』')
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text = '『 請直接提問物品,哈哈 』'))
 
 
 if __name__ == "__main__":
