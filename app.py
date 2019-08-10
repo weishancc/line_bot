@@ -46,7 +46,7 @@ import jieba.posseg as pseg
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     #處理問題並拆出名詞（物品）
-    ques = event.message.message.text
+    ques = event.message.text
     back_text = ""
 
     cuts = pseg.lcut(ques)
