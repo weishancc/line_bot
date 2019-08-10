@@ -53,11 +53,10 @@ def handle_message(event):
     for cut in cuts:
         if(cut.flag =='n'):
             back_text = cut.word
-    print(back_text)
-    
-    line_bot_api.reply_message(
+
+        line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=back_text))
+        TextSendMessage(text = "haha"))
 
 
 if __name__ == "__main__":
