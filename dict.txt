@@ -1,140 +1,139 @@
-爆爆王網咖 150 True bn
-蝙蝠來亂 350 True bn
-super 850 False bn
-sj 850 False bn
-黃色 150 True bn
-黃光 150 True bn
-藍色 150 True bn
-綠光 150 True bn
-肯德基 300 True bn
-kfc 300 True bn
-冰山 200 True bn
-沙漠 200 True bn
-冰雪 500 False bn
-地鐵 800 False bn
-駭客任務 800 False bn
-春風化雨 2000 False bn
-聖誕節慶 200 True bn
-世界大戰1 350 True bn
-世界大戰2 350 True bn
-雪花城堡 250 True bn
-希臘婚禮 350 False bn
-紅喜山莊 400 True bn
-假室長 500 True bn
-俄羅斯 800 True bn
-中國城 500 True bn
-小心炸彈 400 True bn
-傑克與碗豆 350 False bn
-夜空 350 True bn
-古典背景 100 True bn
-便利商店 1000 False bn
-漂亮的房間 1600 True bn
-糖果屋 1000 True bn
-藏書閣 1600 True bn
-夜景 2000 True bn
-深水炸彈工廠 2500 True bn
-俄羅斯 500 False bn
-玩具店 1000 True bn
-賽車 700 True bn
-樂爆幸運星背景 250 True bn
-荒島求生 350 True bn
-中秋花月圓 350 True bn
-仙人掌 700 True bn
-雙十 700 False bn
-星巴客 700 false bn
-反戰背景 350 false bn
-戰地救援 700 True bn
-健身房 700 True bn
-森林王子 200 True bn
-中藥店 600 False bn
-+15 500 True wn
--15 500 True wn
-+30 500 True wn
--30 500 True wn
-+45 500 True wn
--45 500 True wn
-+90 500 True wn
--90 500 True wn
-階級效果1 100 True jn
-階級效果2 100 True jn
-階級效果3 100 True jn
-階級效果4 4000 True jn
-階級效果5 3000 True jn
-階級效果6 100 True jn
-階級效果7 100 True jn
-階級效果8 100 True jn
-防滑鏈 350 True fn 
-虎腳 100 True fn
-柚 300 True fn
-愛心旗幟 350 True fn
-古典旗幟 100 True fn
-龍珠 400 True fn
-樂爆幸運星旗幟 200 True fn
-手榴彈 400 True fn
-破破的旗幟 400 True fn
-雪白的樹 200 True fn
-蛋糕 350 False fn
-郵筒 400 True fn
-黃金燭台 350 True fn
-爆竹 350 True fn
-手機 400 True fn
-止戰牌 350 True fn
-滑雪小子 400 False fn
-貓頭鷹 600 True fn
-甜筒 250 True fn
-棺材 350 True fn
-稻草人 350 True fn
-萬福袋 300 True fn
-2004 650 True fn
-雪花旗 200 True fn
-許願卡 500 True fn
-煙囪 300 True fn
-急救藥包 350 True fn
-水果 350 True fn
-蝴蝶結 350 True fn
-雪人 350 True fn
-小提琴 800 False fn
-蝙蝠樹木 300 False fn
-檯燈 600 True fn
-氣球桶 2000 True fn
-充滿心意的禮物 1800 True fn
-機器人 2000 True fn
-星柱 1000 False fn
-水球旗幟 2500 True fn
-魔法書 800 False fn
-乳酪 1800 True fn
-小吉 100 True pn
-舔窗 100 True pn
-愛麗絲 100 True pn
-貓咪 100 True pn
-鱷魚 500 False pn
-胖鼠 800 False pn
-青蛙跳 500 False pn
-樂爆櫥窗 350 False en
-白虎皮 100 True en
-春雨 600 False en
-星光粉 850 False en
-星粉 850 False en
-流星雨 600 True en
-煙花 1000 False en
-暴風雨 150 True en
-雪花飄 100 True en
-番仔火 100 True cn
-風扇 100 True cn
-火焰翅膀 100 True cn
-鬥氣波 400 True cn
-雪人氣球 300 True cn
-棒球 500 True cn
-手套 500 True cn
-公會氣球 500 True cn
-海狗氣球 350 True cn
-三巨頭 100 True cn
-幽靈背後靈 100 True cn
-星願 500 False ban
-巧克力水球 200 True ban
-聖誕鈴鐺 250 True ban
-足球水球 100 True ban
-螺旋丸 200 True ban
-乳牛水球 100 True ban
-粉紅水球 100 True ban
-西瓜水球 100 True ban
+爆爆王網咖 bn
+蝙蝠來亂 bn
+super bn
+sj bn
+黃色 bn
+黃光 bn
+藍色 bn
+綠光 bn
+肯德基 bn
+kfc bn
+冰山 bn
+沙漠 bn
+冰雪 bn
+地鐵 bn
+駭客任務 bn
+春風化雨 bn
+聖誕節慶 bn
+世界大戰1 bn
+世界大戰2 bn
+雪花城堡 bn
+希臘婚禮 bn
+紅喜山莊 bn
+假室長 bn
+俄羅斯 bn
+中國城 bn
+小心炸彈 bn
+傑克與碗豆 bn
+夜空 bn
+古典背景 bn
+便利商店 bn
+漂亮的房間 bn
+糖果屋 bn
+藏書閣 bn
+夜景 bn
+深水炸彈工廠 bn
+玩具店 bn
+賽車 bn
+樂爆幸運星背景 bn
+荒島求生 bn
+中秋花月圓 bn
+仙人掌 bn
+雙十 bn
+星巴客 bn
+反戰背景 bn
+戰地救援 bn
+健身房 bn
+森林王子 bn
+中藥店 bn
++15 wn
+-15 wn
++30 wn
+-30 wn
++45 wn
+-45 wn
++90 wn
+-90 wn
+階級效果1 jn
+階級效果2 jn
+階級效果3 jn
+階級效果4 jn
+階級效果5 jn
+階級效果6 jn
+階級效果7 jn
+階級效果8 jn
+防滑鏈 fn
+虎腳 fn
+柚 fn
+愛心旗幟 fn
+古典旗幟 fn
+龍珠 fn
+樂爆幸運星旗幟 fn
+手榴彈 fn
+破破的旗幟 fn
+雪白的樹 fn
+蛋糕 fn
+郵筒 fn
+黃金燭台 fn
+爆竹 fn
+手機 fn
+止戰牌 fn
+滑雪小子 fn
+貓頭鷹 fn
+甜筒 fn
+棺材 fn
+稻草人 fn
+萬福袋 fn
+2004 fn
+雪花旗 fn
+許願卡 fn
+煙囪 fn
+急救藥包 fn
+水果 fn
+蝴蝶結 fn
+雪人 fn
+小提琴 fn
+蝙蝠樹木 fn
+檯燈 fn
+氣球桶 fn
+充滿心意的禮物 fn
+機器人 fn
+星柱 fn
+水球旗幟 fn
+魔法書 fn
+乳酪 fn
+小吉 pn
+舔窗 pn
+愛麗絲 pn
+貓咪 pn
+鱷魚 pn
+胖鼠 pn
+青蛙跳 pn
+樂爆櫥窗 en
+白虎皮 en
+春雨 en
+星光粉 en
+星粉 en
+流星雨 en
+煙花 en
+暴風雨 en
+雪花飄 en
+番仔火 cn
+風扇 cn
+火焰翅膀 cn
+鬥氣波 cn
+雪人氣球 cn
+棒球 cn
+手套 cn
+公會氣球 cn
+海狗氣球 cn
+三巨頭 cn
+幽靈背後靈 cn
+星願 ban
+巧克力水球 ban
+聖誕鈴鐺 ban
+足球水球 ban
+螺旋丸 ban
+乳牛水球 ban
+粉紅水球 ban
+西瓜水球 ban
