@@ -82,7 +82,7 @@ def handle_message(event):
     if(not find):
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text = '請提問物品（完整名稱）,我才看得懂啦！\n若是已打完整名稱未找到,那就是我沒放進資料庫裡啦(QAQ)'))
+            TextSendMessage(text = '請提問物品（完整名稱）,我才看得懂啦 \n若是已打完整名稱未找到,那就是我沒放進資料庫裡啦(QAQ)'))
 
 
 if __name__ == "__main__":
