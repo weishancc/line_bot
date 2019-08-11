@@ -68,7 +68,7 @@ def handle_message(event):
     if(not find):
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text = '請直接提問物品（完整名稱）,我才看得懂拉！'))'''
+            TextSendMessage(text = '請直接提問物品（完整名稱）,我才看得懂拉！'))
 
 
 if __name__ == "__main__":
