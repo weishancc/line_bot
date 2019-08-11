@@ -61,7 +61,7 @@ def handle_message(event):
             find = True
 
             #進入進料找資料
-            datas = ItemInfo.query.filter(ItemInfo.category == 'bn').all()
+            datas = ItemInfo.query.filter(ItemInfo.category == 'pn').all()
             for data in datas:
                 data_list.append(data.name)
 
