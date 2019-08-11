@@ -77,7 +77,7 @@ def handle_message(event):
 
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text = ('物品名稱： ' + cut.word + '\n價格： ' + str(datas.price) + '\n庫存： ' + str(datas.stock) + '\n種類： ' + cat(data.category))))
+                TextSendMessage(text = ('物品名稱： ' + cut.word + '\n價格： ' + str(datas.price) + '\n庫存： ' + str(datas.stock) + '\n種類： ' + cate(data.category))))
 
     if(not find):
         line_bot_api.reply_message(
