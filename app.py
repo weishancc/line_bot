@@ -63,7 +63,7 @@ def handle_message(event):
             datas = ItemInfo.query.filter_by(name = cut.word).first()
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text = ('物品名稱： ' + datas.name + '\n價格： ' + str(datas.price) + '\n庫存： ' + str(datas.stock))))
+                TextSendMessage(text = ('物品名稱： ' + cut.word + '\n價格： ' + str(datas.price) + '\n庫存： ' + str(datas.stock))))
 
     if(not find):
         line_bot_api.reply_message(
