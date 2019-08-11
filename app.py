@@ -62,7 +62,7 @@ def handle_message(event):
             find = True
 
             #進入進料找資料
-            datas = ItemInfo.query.filter_by(ItemInfo.name = cut).first()
+            datas = ItemInfo.query.filter_by(ItemInfo.name == cut).first()
             '''data_dic['name'] = datas.name
             data_dic['price'] = datas.price
             data_dic['stock'] = datas.stock
