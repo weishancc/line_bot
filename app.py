@@ -51,7 +51,7 @@ def cate(x):
         'en':'櫥窗效果',
         'cn':'角色效果',
         'ban':'水球'
-    }
+    }.get(x,'category')
 
 # 處理訊息
 import jieba.posseg as pseg
