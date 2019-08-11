@@ -1,2 +1,4 @@
-用到的套件要新增在requirement.txt
-heroku才會連結下載該套件！
+*用到的套件要新增在requirement.txt (psycopg2一定要)
+ heroku才會連結下載該套件！
+
+*app = Flask(__name__)只能有一個
