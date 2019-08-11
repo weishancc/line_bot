@@ -53,8 +53,6 @@ def handle_message(event):
     cuts = pseg.lcut(ques)
     find = False    #找到名詞（物品）
     lst = ['bn','wn','jn','fn', 'pn','en','cn','ban']   #物品種類（詞性）
-    data_list = []  #儲存物品資訊,linebot直接傳送
-    data_dic = {}
 
     #cut.word:物品名稱 ; cut.flag:詞性
     for cut in cuts:
@@ -63,21 +61,11 @@ def handle_message(event):
 
             #進入進料找資料
             datas = ItemInfo.query.filter_by(name = cut.word).first()
-            '''data_dic['name'] = datas.name
-            data_dic['price'] = datas.price
-            data_dic['stock'] = datas.stock
-            data_dic['category'] = datas.category
-            data_list.append(data_dic)
-            data_dic = {}'''
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text = ('物品名稱： ' + datas.name + '\n價格： ' + str(datas.price) + '\n庫存： ' + str(datas.stock))))
 
-    '''if(find):
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text = str(data_list)))
-    else:
+    if(not find):
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text = '請直接提問物品（完整名稱）,我才看得懂拉！'))'''
