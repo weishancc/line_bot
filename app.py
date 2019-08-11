@@ -62,14 +62,13 @@ def handle_message(event):
             find = True
 
             #進入進料找資料
-            datas = ItemInfo.query.filter(ItemInfo.name == cut).all()
-            for data in datas:
-                data_dic['name'] = data.name
-                data_dic['price'] = data.price
-                data_dic['stock'] = data.stock
-                data_dic['category'] = data.category
-                data_list.append(data_dic)
-                data_dic = {}
+            datas = ItemInfo.query.filter_by(ItemInfo.name == cut).first()
+            data_dic['name'] = datas.name
+            data_dic['price'] = datas.price
+            data_dic['stock'] = datas.stock
+            data_dic['category'] = datas.category
+            data_list.append(data_dic)
+            data_dic = {}
 
     if(find):
         line_bot_api.reply_message(
