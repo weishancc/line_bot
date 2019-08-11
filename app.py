@@ -60,9 +60,9 @@ def handle_message(event):
             find = True
             #進入進料找資料
             if(datas is not None):
-            line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text = ('商品名稱： ' + datas.name + '\n價格： ' + datas.price + '\n庫存： ' + str(datas.stock)))
+                line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text = ('商品名稱： ' + datas.name + '\n價格： ' + datas.price + '\n庫存： ' + str(datas.stock)))
 
     if(not find):
         line_bot_api.reply_message(
