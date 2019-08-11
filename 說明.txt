@@ -4,3 +4,8 @@
 *app = Flask(__name__)只能有一個
 
 *heroku log -t （除錯）
+
+*db insert或delete時：
+1.python dbModel.py db init （初始過就不用）
+2.python dbModel.py db migrate
+3.python dbModel.py db upgrade
