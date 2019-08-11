@@ -2,3 +2,5 @@
  heroku才會連結下載該套件！
 
 *app = Flask(__name__)只能有一個
+
+*heroku log -t （除錯）

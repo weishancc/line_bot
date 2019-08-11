@@ -10,6 +10,7 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 from dbmdl import *
+from collections import defaultdict
 
 #app = Flask(__name__)
 
@@ -51,9 +52,11 @@ def handle_message(event):
 
     ques = str(event.message.text)
     cuts = pseg.lcut(ques)
-    find = False #找到名詞（物品）
+    find = False    #找到名詞（物品）
     lst = ['bn','wn','jn','fn', 'pn','en','cn','ban']   #物品種類（詞性）
-    data_list = [] #儲存物品資訊,linebot直接傳送
+    #data_list = []  #儲存物品資訊,linebot直接傳送
+    d = defaultdict(list)   #儲存物品資訊,linebot直接傳送
+    name = ''
 
     #cut.word:物品名稱 ; cut.flag:詞性
     for cut in cuts:
@@ -63,12 +66,16 @@ def handle_message(event):
             #進入進料找資料
             datas = ItemInfo.query.filter(ItemInfo.category == 'pn').all()
             for data in datas:
-                data_list.append(data.name)
+                #data_list.append(data.name)
+                name = data.name
+                d[data.name].append(data.price)
+                d[data.name].append(data.stock)
+                d[data.name].append(data.category)
 
     if(find):
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text = str(data_list)))
+            TextSendMessage(text = d[name]))
     else:
         line_bot_api.reply_message(
             event.reply_token,
