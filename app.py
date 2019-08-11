@@ -59,12 +59,15 @@ def handle_message(event):
         if(cut.flag in lst):
             find = True
 
+            line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text = '123'))
             #進入進料找資料
-            datas = ItemInfo.query.filter_by(name = cut).first()
+            '''datas = ItemInfo.query.filter_by(name = cut).first()
             if(datas is not None):
                 line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text = ('商品名稱： ' + datas.name + '\n價格： ' + datas.price + '\n庫存： ' + str(datas.stock)))
+                TextSendMessage(text = ('商品名稱： ' + datas.name + '\n價格： ' + datas.price + '\n庫存： ' + str(datas.stock)))'''
 
     if(not find):
         line_bot_api.reply_message(
