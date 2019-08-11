@@ -64,7 +64,7 @@ def handle_message(event):
             for data in datas:
                 line_bot_api.reply_message(
                     event.reply_token,
-                    TextSendMessage(text = type(data))
+                    TextSendMessage(text = type(data)))
 
     if(not find):
         line_bot_api.reply_message(
