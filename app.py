@@ -62,7 +62,7 @@ def handle_message(event):
             find = True
 
             #進入進料找資料
-            datas = ItemInfo.query.filter(ItemInfo.category == 'pn').all()
+            datas = ItemInfo.query.filter(ItemInfo.name == cut).all()
             for data in datas:
                 data_dic['name'] = data.name
                 data_dic['price'] = data.price
