@@ -61,10 +61,10 @@ def handle_message(event):
 
             #進入進料找資料
             datas = ItemInfo.query.filter(ItemInfo.category == 'bn').all()
-            for data in datas:
-                line_bot_api.reply_message(
-                    event.reply_token,
-                    TextSendMessage(text = data.name))
+            #for data in datas:
+                #line_bot_api.reply_message(
+                    #event.reply_token,
+                    #TextSendMessage(text = data.name))
 
     if(not find):
         line_bot_api.reply_message(
