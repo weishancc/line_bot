@@ -59,27 +59,16 @@ def handle_message(event):
         if(cut.flag in lst):
             find = True
 
-            #進入進料找資料
+            #搜尋資料
             datas = ItemInfo.query.filter_by(name = cut.word).first()
-            lst = []
-            lst.append(datas)
-
-            '''line_bot_api.reply_message(
+            line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text = ('物品名稱： ' + cut.word + '\n價格： ' + str(datas.price) + '\n庫存： ' + str(datas.stock))))'''
+                TextSendMessage(text = ('物品名稱： ' + cut.word + '\n價格： ' + str(datas.price) + '\n庫存： ' + str(datas.stock))))
 
-    if(find):
+    if(not find):
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text = '1'))
-
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text = '2'))
-    else:
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text = '請直接提問物品（完整名稱）,我才看得懂拉！'))
+            TextSendMessage(text = '請提問物品（完整名稱）,我才看得懂拉！'))
 
 
 if __name__ == "__main__":
