@@ -58,7 +58,9 @@ def handle_message(event):
     for cut in cuts:
         if(cut.flag in lst):
             find = True
+
             #進入進料找資料
+            datas = ItemInfo.query.filter_by(name = cut).first()
             if(datas is not None):
                 line_bot_api.reply_message(
                 event.reply_token,
