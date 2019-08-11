@@ -103,11 +103,13 @@ kfc bn
 魔法書 fn
 乳酪 fn
 小吉 pn
+煙火棒 pn
 舔窗 pn
 愛麗絲 pn
 貓咪 pn
 鱷魚 pn
 胖鼠 pn
+胖胖鼠 pn
 青蛙跳 pn
 樂爆櫥窗 en
 白虎皮 en
@@ -122,6 +124,7 @@ kfc bn
 風扇 cn
 火焰翅膀 cn
 鬥氣波 cn
+sj入場 cn
 雪人氣球 cn
 棒球 cn
 手套 cn
