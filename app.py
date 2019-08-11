@@ -54,6 +54,9 @@ def handle_message(event):
     find = False #找到名詞（物品）
     lst = ['bn','wn','jn','fn', 'pn','en','cn','ban']   #物品種類（詞性）
 
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text = 'begin'))
     add_data = ItemInfo('c',400,True,'cb')
     db.session.add(add_data)
     db.session.commit()
