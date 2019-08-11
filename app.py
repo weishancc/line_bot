@@ -40,6 +40,19 @@ def callback():
 
     return 'OK'
 
+#分辨物品種類（switch）
+def cate(x):
+    return {
+        'bn':'背景'
+        'fn':'旗幟'
+        'wn':'偽裝階級'
+        'jn':'階級效果'
+        'pn':'櫥窗道具'
+        'en':'櫥窗效果'
+        'cn':'角色效果'
+        'ban':'水球'
+    }
+
 # 處理訊息
 import jieba.posseg as pseg
 import jieba
@@ -61,9 +74,10 @@ def handle_message(event):
 
             #搜尋資料
             datas = ItemInfo.query.filter_by(name = cut.word).first()
+
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text = ('物品名稱： ' + cut.word + '\n價格： ' + str(datas.price) + '\n庫存： ' + str(datas.stock))))
+                TextSendMessage(text = ('物品名稱： ' + cut.word + '\n價格： ' + str(datas.price) + '\n庫存： ' + str(datas.stock) + '\n種類： ' + cat(data.category))))
 
     if(not find):
         line_bot_api.reply_message(
