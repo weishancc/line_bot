@@ -13,6 +13,10 @@ migrate = Migrate(app, db)
 manager = Manager(app)
 manager.add_command('db', MigrateCommand)
 
+'''if db.engine.dialect.has_table(db.engine, 'alembic_version'):
+    sql = 'DROP TABLE alembic_version;'
+    result = db.engine.execute(sql)'''
+
 class ItemInfo(db.Model):
     __tablename__ = 'ItemInfo'
     name = db.Column(db.String(20), primary_key=True)

@@ -9,3 +9,9 @@
 1.python dbModel.py db init （初始過就不用）
 2.python dbModel.py db migrate
 3.python dbModel.py db upgrade
+
+*Can't locate revision identified by 'xxxxxxxxxx' => 刪除alembi_version表中的版本號
+
+if db.engine.dialect.has_table(db.engine, 'alembic_version'):
+    sql = 'DROP TABLE alembic_version;'
+    result = db.engine.execute(sql)
