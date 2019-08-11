@@ -42,7 +42,7 @@ def callback():
 # 處理訊息
 import jieba.posseg as pseg
 import jieba
-from dbmdl import *
+#from dbmdl import *
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
