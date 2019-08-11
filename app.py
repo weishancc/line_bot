@@ -71,13 +71,16 @@ def handle_message(event):
     for cut in cuts:
         if(cut.flag in lst):
             find = True
-
-            #搜尋資料
-            datas = ItemInfo.query.filter_by(name = cut.word).first()
-
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text = ('物品名稱： ' + cut.word + '\n價格： ' + str(datas.price) + '\n庫存： ' + str(datas.stock) + '\n種類： ' + cate(datas.category))))
+                TextSendMessage(text = cut.word))
+
+            #搜尋資料
+            #datas = ItemInfo.query.filter_by(name = cut.word).first()
+
+            #line_bot_api.reply_message(
+                #event.reply_token,
+                #TextSendMessage(text = ('物品名稱： ' + cut.word + '\n價格： ' + str(datas.price) + '\n庫存： ' + str(datas.stock) + '\n種類： ' + cate(datas.category))))
 
     if(not find):
         line_bot_api.reply_message(
