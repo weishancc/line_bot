@@ -54,7 +54,7 @@ def handle_message(event):
     find = False #找到名詞（物品）
     lst = ['bn','wn','jn','fn', 'pn','en','cn','ban']   #物品種類（詞性）
     data_list = [] #儲存物品資訊,linebot直接傳送
-    
+
     #cut.word:物品名稱 ; cut.flag:詞性
     for cut in cuts:
         if(cut.flag in lst):
@@ -65,11 +65,11 @@ def handle_message(event):
             for data in datas:
                 data_list.append(data.name)
 
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text = str(data_list)))
-
-    if(not find):
+    if(find):
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text = str(data_list)))
+    else:
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text = '請直接提問物品（完整名稱）,我才看得懂拉！'))
