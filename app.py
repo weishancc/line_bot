@@ -69,7 +69,7 @@ def handle_message(event):
                 TextSendMessage(text = ('物品名稱： ' + cut.word + '\n價格： ' + str(datas.price) + '\n庫存： ' + str(datas.stock))))'''
 
     if(find):
-        for data in datas:
+        for data in lst:
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text = data.name))
