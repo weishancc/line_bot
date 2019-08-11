@@ -42,6 +42,7 @@ def callback():
 # 處理訊息
 import jieba.posseg as pseg
 import jieba
+from dbmdl import *
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -57,9 +58,13 @@ def handle_message(event):
     for cut in cuts:
         if(cut.flag in lst):
             find = True
-            line_bot_api.reply_message(
+
+            #進入進料找資料
+            datas = ItemInfo.query.filter(ItemInfo.name == cut).first()
+            if(datas is not None):
+                line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text = cut.word))
+                TextSendMessage(text = ('商品名稱： ' + datas.name + '\n價格： ' + datas.price + '\n庫存： ' + str(datas.stock)))
     if(not find):
         line_bot_api.reply_message(
             event.reply_token,
