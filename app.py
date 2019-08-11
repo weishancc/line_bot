@@ -61,8 +61,8 @@ def handle_message(event):
 
             #進入進料找資料
             #datas = ItemInfo.query.filter_by(name = '健身房').first()
-            #line_bot_api.reply_message(
-            #event.reply_token,
+            line_bot_api.reply_message(
+            event.reply_token,
             TextSendMessage(text = '123')
 
             #if(datas is not None):
